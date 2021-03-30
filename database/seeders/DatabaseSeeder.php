@@ -15,6 +15,7 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         RegionesComunasSeeder::staticHandle();
+        $this->call(RolesSeeder::class);
         $this->call(UsuariosSeeder::class);
     }
 }
