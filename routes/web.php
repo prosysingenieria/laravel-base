@@ -22,15 +22,14 @@ Route::get('/', function () {
 });
 
 //'middleware' => 'auth'
-Route::group(['prefix' => 'admin', 'as' => 'admin.' ], function () {
+Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => 'auth'], function () {
     Route::get('/', [DashboardController::class, 'index'])->name('index');
 });
 
+
+Route::get('/', [App\Http\Controllers\BaseProyecto::class, 'index'])->name('explicacion-proyecto');
 
 //Ruta 404
 Route::fallback(function() {
     return view('errors.404');
 });
-
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
