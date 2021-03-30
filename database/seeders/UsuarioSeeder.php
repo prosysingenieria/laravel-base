@@ -19,7 +19,7 @@ class UsuariosSeeder extends Seeder
                 'primer_apellido' => 'Viña',
                 'segundo_apellido' => 'del Mar',
                 'email' => 'usuario@prosys.cl',
-                'password' => Hash::make('123456'),
+                'password' => Hash::make('q1w2e3r4t5'),
             ],
         );
         $admin->assignRole('admin');
