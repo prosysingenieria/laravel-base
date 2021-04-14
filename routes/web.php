@@ -1,7 +1,14 @@
 <?php
 
-use App\Http\Controllers\Admin\DashboardController;
 use Illuminate\Support\Facades\Route;
+
+use App\Http\Controllers\Publico\{
+    BaseProyecto,
+};
+
+use App\Http\Controllers\Admin\{
+    DashboardController,
+};
 
 /*
 |--------------------------------------------------------------------------
@@ -17,17 +24,24 @@ use Illuminate\Support\Facades\Route;
 //Auth::routes();
 
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', [BaseProyecto::class, 'index'])->name('explicacion-proyecto');
+
+//Rutas publicas, que no requieren iniciar sesión
+Route::group(['prefix' => 'publico', 'as' => 'publico.'], function () {
+
 });
 
-//'middleware' => 'auth'
+//Usuarios que han iniciado sesión pero que no cuentan con acceso de administrador, ya sea usuarios/suscriptores/etc
+Route::group(['prefix' => 'usuarios', 'as' => 'usuarios.'], function () {
+
+});
+
+//Rutas de administración, para ingresar al panel de control
 Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => 'auth'], function () {
     Route::get('/', [DashboardController::class, 'index'])->name('index');
 });
 
 
-Route::get('/', [App\Http\Controllers\BaseProyecto::class, 'index'])->name('explicacion-proyecto');
 
 //Ruta 404
 Route::fallback(function() {
