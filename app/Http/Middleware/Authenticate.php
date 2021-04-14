@@ -4,6 +4,7 @@ namespace App\Http\Middleware;
 
 use Illuminate\Auth\Middleware\Authenticate as Middleware;
 use Closure;
+use RealRashid\SweetAlert\Facades\Alert;
 class Authenticate extends Middleware
 {
 
@@ -13,6 +14,7 @@ class Authenticate extends Middleware
         // dd(auth()->user()->hasRole('admin'));
 
         if ($request->is('admin*') && !(auth()->user()->hasRole('admin'))) {
+            alert()->error('Inicia sesión para continuar');
             $this->unauthenticated($request, $guards);
         }
 
