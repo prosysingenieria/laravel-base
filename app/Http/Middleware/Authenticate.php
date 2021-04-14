@@ -3,7 +3,9 @@
 namespace App\Http\Middleware;
 
 use Illuminate\Auth\Middleware\Authenticate as Middleware;
+use Illuminate\Support\Facades\Auth;
 use Closure;
+
 use RealRashid\SweetAlert\Facades\Alert;
 class Authenticate extends Middleware
 {
