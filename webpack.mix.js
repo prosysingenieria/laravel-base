@@ -17,5 +17,9 @@ mix.js('resources/js/admin/main.js', 'public/js/admin/main.js')
     .sass('resources/sass/admin/main.scss', 'public/css/admin/main.css')
     .copy('resources/images/', 'public/images')
     .copy('resources/icons/', 'public/icons')
+    .copy('resources/fonts/', 'public/fonts')
+    .options({
+        processCssUrls: false
+    });
 
 mix.copyDirectory('node_modules/@fortawesome/fontawesome-free/webfonts', 'public/css/webfonts');
