@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Publico;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class BaseProyecto extends Controller
 {
@@ -23,6 +24,6 @@ class BaseProyecto extends Controller
      */
     public function index()
     {
-        return view('welcome');
+        return view('publico.welcome');
     }
 }
