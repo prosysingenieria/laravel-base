@@ -75,6 +75,7 @@
                         <ul>
                             <li>Con respecto a páginas de errores, como mínimo deben personalizarse las páginas 404 y 502, ambas ya publicadas en ~/resources/views/errors</li>
                             <li>Considerar añadir Google Analytics</li>
+                            <li>Revisar limitaciones Apache en lo que respecta a subida de archivos y tamaño máximo de cada request http</li>
                             <li>Generar archivo robots.txt antes de pasar a producción</li>
                         </ul>
                     </div>
