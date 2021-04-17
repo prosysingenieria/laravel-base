@@ -9,6 +9,7 @@ Paquetes composer incluidos:
 - [Sweet Alert](https://github.com/realrashid/sweet-alert).
 - [Email database log](https://github.com/shvetsgroup/laravel-email-database-log).
 - [Permisos Spatie](https://github.com/spatie/laravel-permission).
+- [Laravel DebugBar](https://github.com/barryvdh/laravel-debugbar).
 
 Paquetes npm incluidos:
 

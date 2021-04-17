@@ -51,6 +51,7 @@
                             <li><a target="blank" href="https://github.com/realrashid/sweet-alert">Sweet Alert</a>.</li>
                             <li><a target="blank" href="https://github.com/shvetsgroup/laravel-email-database-log">Email database log</a>.</li>
                             <li><a target="blank" href="https://github.com/spatie/laravel-permission">Permisos Spatie</a>.</li>
+                            <li><a target="blank" href="https://github.com/barryvdh/laravel-debugbar">Laravel DebugBar</a>.</li>
                         </ul>
                         <p>Paquetes npm incluidos:</p>
                         <ul>
