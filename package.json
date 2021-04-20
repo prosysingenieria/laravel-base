@@ -23,6 +23,7 @@
     },
     "dependencies": {
         "@fortawesome/fontawesome-free": "^5.15.1",
+        "intl-tel-input": "^17.0.12",
         "startbootstrap-sb-admin-2": "^4.1.3"
     }
 }

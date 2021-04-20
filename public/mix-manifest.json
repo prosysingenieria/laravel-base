@@ -1,5 +1,7 @@
 {
     "/js/admin/main.js": "/js/admin/main.js",
+    "/js/components/intl-phone-input.js": "/js/components/intl-phone-input.js",
+    "/css/intl-phone-input.css": "/css/intl-phone-input.css",
     "/css/admin/main.css": "/css/admin/main.css",
     "/css/webfonts/fa-brands-400.eot": "/css/webfonts/fa-brands-400.eot",
     "/css/webfonts/fa-brands-400.svg": "/css/webfonts/fa-brands-400.svg",
@@ -15,5 +17,7 @@
     "/css/webfonts/fa-solid-900.svg": "/css/webfonts/fa-solid-900.svg",
     "/css/webfonts/fa-solid-900.ttf": "/css/webfonts/fa-solid-900.ttf",
     "/css/webfonts/fa-solid-900.woff": "/css/webfonts/fa-solid-900.woff",
-    "/css/webfonts/fa-solid-900.woff2": "/css/webfonts/fa-solid-900.woff2"
+    "/css/webfonts/fa-solid-900.woff2": "/css/webfonts/fa-solid-900.woff2",
+    "/icons/flags.png": "/icons/flags.png",
+    "/icons/flags@2x.png": "/icons/flags@2x.png"
 }
