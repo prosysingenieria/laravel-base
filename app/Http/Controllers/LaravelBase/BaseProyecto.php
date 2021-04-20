@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Publico;
+namespace App\Http\Controllers\LaravelBase;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -25,5 +25,9 @@ class BaseProyecto extends Controller
     public function index()
     {
         return view('publico.welcome');
+    }
+
+    public function telefonoEjemplo(){
+        return view('ejemplos.telefono');
     }
 }

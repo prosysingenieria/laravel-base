@@ -2,8 +2,16 @@
 
 use Illuminate\Support\Facades\Route;
 
-use App\Http\Controllers\Publico\{
+use App\Http\Controllers\LaravelBase\{
     BaseProyecto,
+};
+
+use App\Http\Controllers\Publico\{
+    PublicController,
+};
+
+use App\Http\Controllers\Usuario\{
+    UsuarioController,
 };
 
 use App\Http\Controllers\Admin\{
@@ -27,17 +35,23 @@ use App\Http\Controllers\Admin\{
 Route::get('/', [BaseProyecto::class, 'index'])->name('explicacion-proyecto');
 
 //Rutas publicas, que no requieren iniciar sesión
-Route::group(['prefix' => 'publico', 'as' => 'publico.'], function () {
+Route::group(['prefix' => 'ejemplos', 'as' => 'baseproyecto::'], function () {
+    Route::get('/telefono', [BaseProyecto::class, 'telefonoEjemplo'])->name('telefonoEjemplo');
+});
+
+
+//Rutas publicas, que no requieren iniciar sesión
+Route::group(['prefix' => 'publico', 'as' => 'publico::'], function () {
 
 });
 
-//Usuarios que han iniciado sesión pero que no cuentan con acceso de administrador, ya sea usuarios/suscriptores/etc
-Route::group(['prefix' => 'usuarios', 'as' => 'usuarios.'], function () {
+//Usuarios que han iniciado sesión pero que no cuentan con acceso de administrador, ya sea usuarios/suscriptores/miembros/etc
+Route::group(['prefix' => 'usuarios', 'as' => 'usuarios::', 'middleware' => 'auth'], function () {
 
 });
 
 //Rutas de administración, para ingresar al panel de control
-Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => 'auth'], function () {
+Route::group(['prefix' => 'admin', 'as' => 'admin::', 'middleware' => 'auth'], function () {
     Route::get('/', [DashboardController::class, 'index'])->name('index');
 });
 
